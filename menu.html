@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Pandri Sembako - Produk</title>
+  <meta name="description" content="Pandri Sembako - Daftar produk toko kelontong kami di Jember." />
+  <meta name="keywords" content="toko kelontong, sembako, produk, Jember" />
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <style>
+    :root {
+      --primary-color: #1E88E5;
+      --secondary-color: #E3F2FD;
+      --accent-color: #1565C0;
+      --text-color: #212121;
+      --background-color: #FFFFFF;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: var(--text-color);
+      background-color: var(--background-color);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+      color: var(--text-color);
+    }
+
+    .header {
+      background-color: var(--background-color);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo img {
+      transition: transform 0.3s ease;
+      max-width: 140px;
+    }
+
+    .logo img:hover {
+      transform: scale(1.05);
+    }
+
+    .navmenu ul li a {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      color: var(--text-color);
+      padding: 10px 15px;
+      transition: color 0.3s ease, background-color 0.3s ease;
+      border-radius: 5px;
+    }
+
+    .navmenu ul li a:hover,
+    .navmenu ul li a.active {
+      color: var(--primary-color);
+      background-color: var(--secondary-color);
+    }
+
+    .menu {
+      background: linear-gradient(135deg, var(--secondary-color), var(--background-color));
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section-title .description-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .menu-item img {
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .menu-item img:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .footer {
+      background-color: #1A2521;
+      color: #FFFFFF;
+      padding: 60px 0;
+    }
+
+    .footer .icon {
+      font-size: 1.75rem;
+      color: var(--accent-color);
+      margin-right: 15px;
+    }
+
+    .footer a.text-info {
+      color: var(--accent-color) !important;
+      transition: color 0.3s ease;
+    }
+
+    .footer a.text-info:hover {
+      color: var(--primary-color) !important;
+    }
+
+    .scroll-top {
+      background-color: var(--primary-color);
+      color: #FFFFFF;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .scroll-top:hover {
+      background-color: var(--accent-color);
+    }
+
+    @media (max-width: 992px) {
+      .section-title .description-title {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        padding: 60px 0;
+      }
+
+      .section-title .description-title {
+        font-size: 1.75rem;
+      }
+
+      .navmenu ul {
+        flex-direction: column;
+        background-color: var(--background-color);
+        padding: 20px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        display: none;
+      }
+
+      .navmenu ul.show {
+        display: flex;
+      }
+
+      .mobile-nav-toggle {
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+    }
+  </style>
+</head>
+
+<body class="index-page">
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/Logo bu pandri3.png.jpg" width="140" alt="Pandri Sembako" />
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero">Utama</a></li>
+          <li><a href="about.html">Keunggulan</a></li>
+          <li><a href="menu.html" class="active">Produk</a></li>
+          <li><a href="chefs.html">Tentang Kami</a></li>
+          <li><a href="gallery.html">Album</a></li>
+          <li><a href="lokasi.html">Lokasi</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- Menu Section -->
+    <section id="menu" class="menu section">
+      <div class="container section-title" data-aos="fade-up">
+        <p><span class="description-title">Produk Yang Tersedia</span></p>
+      </div>
+
+      <div class="container">
+        <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
+          <div class="tab-pane fade active show" id="menu-starters">
+            <div class="row gy-5">
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/sembako 1.png" class="glightbox"><img src="assets/img/menu/sembako 1.png" class="menu-img img-fluid" alt="Sembako" /></a>
+                <h4>Sembako</h4>
+                <p class="ingredients">Kebutuhan pokok harian yang penting untuk dikonsumsi dan digunakan sehari-hari.</p>
+              </div>
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/minuman 1.png" class="glightbox"><img src="assets/img/menu/minuman 1.png" class="menu-img img-fluid" alt="Minuman" /></a>
+                <h4>Minuman</h4>
+                <p class="ingredients">Produk yang dikonsumsi untuk melepas dahaga dan menyegarkan tubuh.</p>
+              </div>
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/ringan.png" class="glightbox"><img src="assets/img/menu/ringan.png" class="menu-img img-fluid" alt="Makanan Ringan" /></a>
+                <h4>Makanan Ringan</h4>
+                <p class="ingredients">Camilan untuk menemani waktu santai atau sebagai pelengkap makanan utama.</p>
+              </div>
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/bersih.png" class="glightbox"><img src="assets/img/menu/bersih.png" class="menu-img img-fluid" alt="Produk Kebersihan" /></a>
+                <h4>Produk Kebersihan</h4>
+                <p class="ingredients">Barang-barang yang digunakan untuk menjaga kebersihan diri dan rumah.</p>
+              </div>
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/tangga.png" class="glightbox"><img src="assets/img/menu/tangga.png" class="menu-img img-fluid" alt="Produk Rumah Tangga" /></a>
+                <h4>Produk Rumah Tangga</h4>
+                <p class="ingredients">Perlengkapan yang dibutuhkan sehari-hari untuk menunjang aktivitas di rumah.</p>
+              </div>
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/mainan.jpg" class="glightbox"><img src="assets/img/menu/mainan.jpg" class="menu-img img-fluid" alt="Barang Hiburan" /></a>
+                <h4>Barang Hiburan</h4>
+                <p class="ingredients">Barang-barang yang digunakan untuk bermain atau hiburan, terutama untuk anak-anak.</p>
+              </div>
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/obat.jpg" class="glightbox"><img src="assets/img/menu/obat.jpg" class="menu-img img-fluid" alt="Obat Ringan" /></a>
+                <h4>Obat Ringan</h4>
+                <p class="ingredients">Obat-obatan umum yang digunakan untuk mengatasi keluhan kesehatan ringan.</p>
+              </div>
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/pulsa.jpg" class="glightbox"><img src="assets/img/menu/pulsa.jpg" class="menu-img img-fluid" alt="Produk Elektronik" /></a>
+                <h4>Produk Elektronik</h4>
+                <p class="ingredients">Peralatan elektronik rumah tangga dan pribadi untuk menunjang aktivitas sehari-hari.</p>
+              </div>
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/bayi.jpg" class="glightbox"><img src="assets/img/menu/bayi.jpg" class="menu-img img-fluid" alt="Kebutuhan Anak" /></a>
+                <h4>Kebutuhan Anak</h4>
+                <p class="ingredients">Barang-barang yang dibutuhkan untuk perawatan, hiburan, dan pertumbuhan anak.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Menu Section -->
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container">
+      <div class="row gy-3">
+        <div class="col-lg-4 col-md-6 d-flex">
+          <i class="bi bi-geo-alt icon text-info"></i>
+          <div class="address">
+            <h4>Alamat</h4>
+            <p>Jl. Griya Mangli Indah</p>
+            <p>Jember, Jawa Timur (68131)</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex">
+          <i class="bi bi-telephone icon text-info"></i>
+          <div>
+            <h4>Hubungi Kami</h4>
+            <p>
+              <strong>No Telp:</strong> <span>+62 86709876785</span><br />
+              <strong>Email:</strong> <span>Pandri090@gmail.com</span><br />
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex">
+          <i class="bi bi-clock icon text-info"></i>
+          <div>
+            <h4>Jam Buka</h4>
+            <p>
+              <strong>Senin-Sabtu:</strong> <span>06.00 - 23.00</span><br />
+              <strong>Minggu:</strong> <span>06.00 - 23.00</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>
+        © <span>Copyright</span> <strong class="px-1 sitename">TADA DEV</strong>
+        <span>All Rights Reserved</span>
+      </p>
+      <div class="credits">
+        Designed by
+        <a href="https://bootstrapmade.com/" class="text-info">BootstrapMade</a> Distributed by
+        <a href="https://themewagon.com" class="text-info">ThemeWagon</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

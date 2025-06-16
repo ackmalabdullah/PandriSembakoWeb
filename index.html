@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Pandri Sembako</title>
+  <meta name="description" content="Pandri Sembako - Toko kelontong lengkap dengan harga bersahabat dan pelayanan ramah di Jember." />
+  <meta name="keywords" content="toko kelontong, sembako, kebutuhan harian, Jember" />
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <style>
+    :root {
+      --primary-color: #1E88E5;
+      --secondary-color: #E3F2FD;
+      --accent-color: #1565C0;
+      --text-color: #212121;
+      --background-color: #FFFFFF;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: var(--text-color);
+      background-color: var(--background-color);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+      color: var(--text-color);
+    }
+
+    .header {
+      background-color: var(--background-color);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo img {
+      transition: transform 0.3s ease;
+      max-width: 140px;
+    }
+
+    .logo img:hover {
+      transform: scale(1.05);
+    }
+
+    .navmenu ul li a {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      color: var(--text-color);
+      padding: 10px 15px;
+      transition: color 0.3s ease, background-color 0.3s ease;
+      border-radius: 5px;
+    }
+
+    .navmenu ul li a:hover,
+    .navmenu ul li a.active {
+      color: var(--primary-color);
+      background-color: var(--secondary-color);
+    }
+
+    .hero, .about, .why-us, .menu, .chefs, .gallery, .lokasi {
+      background: linear-gradient(135deg, var(--secondary-color), var(--background-color));
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.125rem;
+      color: var(--text-color);
+      max-width: 600px;
+    }
+
+    .hero-img img,
+    .about img,
+    .menu-item img,
+    .swiper-slide img,
+    .team-member img {
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hero-img img:hover,
+    .about img:hover,
+    .menu-item img:hover,
+    .swiper-slide img:hover,
+    .team-member img:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .section-title .description-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .why-box {
+      background-color: var(--secondary-color);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .why-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .icon-box i {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+
+    .icon-box h4 {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    .team-member {
+      background-color: var(--background-color);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .team-member:hover {
+      transform: translateY(-5px);
+    }
+
+    .social a {
+      color: var(--primary-color);
+      font-size: 1.25rem;
+      margin: 0 8px;
+      transition: color 0.3s ease;
+    }
+
+    .social a:hover {
+      color: var(--accent-color);
+    }
+
+    iframe {
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .footer {
+      background-color: #1A2521;
+      color: #FFFFFF;
+      padding: 60px 0;
+    }
+
+    .footer .icon {
+      font-size: 1.75rem;
+      color: var(--accent-color);
+      margin-right: 15px;
+    }
+
+    .footer a.text-info {
+      color: var(--accent-color) !important;
+      transition: color 0.3s ease;
+    }
+
+    .footer a.text-info:hover {
+      color: var(--primary-color) !important;
+    }
+
+    .scroll-top {
+      background-color: var(--primary-color);
+      color: #FFFFFF;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .scroll-top:hover {
+      background-color: var(--accent-color);
+    }
+
+    @media (max-width: 992px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .section-title .description-title {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero, .about, .why-us, .menu, .chefs, .gallery, .lokasi {
+        padding: 60px 0;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .section-title .description-title {
+        font-size: 1.75rem;
+      }
+
+      .navmenu ul {
+        flex-direction: column;
+        background-color: var(--background-color);
+        padding: 20px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        display: none;
+      }
+
+      .navmenu ul.show {
+        display: flex;
+      }
+
+      .mobile-nav-toggle {
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+    }
+  </style>
+</head>
+
+<body class="index-page">
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/Logo bu pandri3.png.jpg" width="140" alt="Pandri Sembako" />
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero" class="active">Utama</a></li>
+          <li><a href="about.html">Keunggulan</a></li>
+          <li><a href="menu.html">Produk</a></li>
+          <li><a href="chefs.html">Tentang Kami</a></li>
+          <li><a href="gallery.html">Album</a></li>
+          <li><a href="lokasi.html">Lokasi</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+      <div class="container">
+        <div class="row gy-4 justify-content-center justify-content-lg-between">
+          <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center">
+            <h1 data-aos="fade-up">Kelontong Lengkap<br />Hidup Lebih Mudah</h1>
+            <p data-aos="fade-up" data-aos-delay="100">
+              Bukan sekadar slogan — kami hadir dengan berbagai pilihan produk, harga bersahabat, dan pelayanan ramah. Dari kebutuhan dapur hingga perlengkapan rumah tangga, semua tersedia lengkap tanpa ribet. Yuk, belanja sekarang dan rasakan kemudahannya!
+            </p>
+          </div>
+          <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
+            <img src="assets/img/bu pandri.png" class="img-fluid animated" alt="Pandri Sembako" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <div class="container section-title" data-aos="fade-up">
+        <p><span class="description-title">Keunggulan</span></p>
+      </div>
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+            <img src="assets/img/Toko Kelontong di Siang Hari.png" class="img-fluid mb-4" alt="Toko Kelontong" />
+          </div>
+          <div class="col-lg-5" data-aos="fade-up" data-aos-delay="250">
+            <div class="content ps-0 ps-lg-5">
+              <ul>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <b>Dekat dengan Konsumen</b>
+                  <p>Toko kelontong biasanya berada di tengah-tengah lingkungan warga, sehingga mudah dijangkau tanpa perlu transportasi.</p>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <b>Harga Bisa Nego</b>
+                  <p>Tidak seperti minimarket modern, harga di toko kelontong seringkali bisa dinego atau disesuaikan, apalagi untuk pelanggan tetap.</p>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <b>Bisa Beli Eceran</b>
+                  <p>Toko kelontong biasanya menyediakan barang dalam jumlah kecil atau satuan, sehingga cocok untuk kebutuhan harian tanpa harus beli dalam jumlah besar.</p>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <b>Pelayanan Personal</b>
+                  <p>Pemilik toko biasanya kenal dengan pelanggan, sehingga pelayanannya lebih ramah dan personal.</p>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <b>Buka Lebih Fleksibel</b>
+                  <p>Toko kelontong sering buka lebih pagi dan tutup lebih malam, bahkan bisa buka saat hari libur.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /About Section -->
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="why-us section">
+      <div class="container">
+        <div class="row gy-4 align-items-stretch">
+          <div class="col-lg-4">
+            <div class="why-box h-100">
+              <h3>Fitur Unggulan Dari Aplikasi Kami</h3>
+              <p>
+                Aplikasi toko kelontong ini hadir dengan fitur-fitur unggulan yang mempermudah pengelolaan bisnis secara efisien. Mulai dari manajemen penjualan untuk mencatat transaksi harian secara cepat dan praktis, manajemen pembelian untuk mengatur stok masuk dari supplier, hingga manajemen produk dan stok yang memantau ketersediaan barang secara real-time dengan update otomatis. Fitur supplier management membantu menyimpan data supplier dan mengatur pembayaran dengan mudah, sementara manajemen user memungkinkan pengaturan akses bagi admin atau staf sesuai kebutuhan. Semua kegiatan ini didukung oleh laporan usaha yang menyajikan data penjualan dan stok secara ringkas, sehingga pemilik toko dapat mengambil keputusan bisnis dengan lebih tepat dan terarah.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-8 d-flex align-items-stretch">
+            <div class="row gy-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="col-xl-4">
+                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                  <i class="bi bi-clipboard-data"></i>
+                  <h4>Manajemen Penjualan</h4>
+                  <p>Catat transaksi harian secara cepat dan praktis.</p>
+                </div>
+              </div>
+              <div class="col-xl-4">
+                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                  <i class="bi bi-gem"></i>
+                  <h4>Manajemen Pembelian</h4>
+                  <p>Kelola stok masuk dari supplier dengan rapi.</p>
+                </div>
+              </div>
+              <div class="col-xl-4">
+                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                  <i class="bi bi-inboxes"></i>
+                  <h4>Manajemen Produk & Stok</h4>
+                  <p>Pantau jumlah stok secara real-time & update otomatis.</p>
+                </div>
+              </div>
+              <div class="col-xl-4">
+                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                  <i class="bi bi-journal-check"></i>
+                  <h4>Supplier Management</h4>
+                  <p>Simpan data supplier dan atur pembayaran lebih mudah.</p>
+                </div>
+              </div>
+              <div class="col-xl-4">
+                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                  <i class="bi bi-person"></i>
+                  <h4>Manajemen User</h4>
+                  <p>Kelola admin dan pengguna dengan kontrol akses penuh.</p>
+                </div>
+              </div>
+              <div class="col-xl-4">
+                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                  <i class="bi bi-bar-chart-fill"></i>
+                  <h4>Laporan Usaha</h4>
+                  <p>Dapatkan insight bisnis melalui laporan penjualan dan stok.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Why Us Section -->
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu section">
+      <div class="container section-title" data-aos="fade-up">
+        <p><span class="description-title">Produk Yang Tersedia</span></p>
+      </div>
+
+      <div class="container">
+        <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
+          <div class="tab-pane fade active show" id="menu-starters">
+            <div class="row gy-5">
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/sembako 1.png" class="glightbox"><img src="assets/img/menu/sembako 1.png" class="menu-img img-fluid" alt="Sembako" /></a>
+                <h4>Sembako</h4>
+                <p class="ingredients">Kebutuhan pokok harian yang penting untuk dikonsumsi dan digunakan sehari-hari.</p>
+              </div>
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/minuman 1.png" class="glightbox"><img src="assets/img/menu/minuman 1.png" class="menu-img img-fluid" alt="Minuman" /></a>
+                <h4>Minuman</h4>
+                <p class="ingredients">Produk yang dikonsumsi untuk melepas dahaga dan menyegarkan tubuh.</p>
+              </div>
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/ringan.png" class="glightbox"><img src="assets/img/menu/ringan.png" class="menu-img img-fluid" alt="Makanan Ringan" /></a>
+                <h4>Makanan Ringan</h4>
+                <p class="ingredients">Camilan untuk menemani waktu santai atau sebagai pelengkap makanan utama.</p>
+              </div>
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/bersih.png" class="glightbox"><img src="assets/img/menu/bersih.png" class="menu-img img-fluid" alt="Produk Kebersihan" /></a>
+                <h4>Produk Kebersihan</h4>
+                <p class="ingredients">Barang-barang yang digunakan untuk menjaga kebersihan diri dan rumah.</p>
+              </div>
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/tangga.png" class="glightbox"><img src="assets/img/menu/tangga.png" class="menu-img img-fluid" alt="Produk Rumah Tangga" /></a>
+                <h4>Produk Rumah Tangga</h4>
+                <p class="ingredients">Perlengkapan yang dibutuhkan sehari-hari untuk menunjang aktivitas di rumah.</p>
+              </div>
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/mainan.jpg" class="glightbox"><img src="assets/img/menu/mainan.jpg" class="menu-img img-fluid" alt="Barang Hiburan" /></a>
+                <h4>Barang Hiburan</h4>
+                <p class="ingredients">Barang-barang yang digunakan untuk bermain atau hiburan, terutama untuk anak-anak.</p>
+              </div>
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/obat.jpg" class="glightbox"><img src="assets/img/menu/obat.jpg" class="menu-img img-fluid" alt="Obat Ringan" /></a>
+                <h4>Obat Ringan</h4>
+                <p class="ingredients">Obat-obatan umum yang digunakan untuk mengatasi keluhan kesehatan ringan.</p>
+              </div>
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/pulsa.jpg" class="glightbox"><img src="assets/img/menu/pulsa.jpg" class="menu-img img-fluid" alt="Produk Elektronik" /></a>
+                <h4>Produk Elektronik</h4>
+                <p class="ingredients">Peralatan elektronik rumah tangga dan pribadi untuk menunjang aktivitas sehari-hari.</p>
+              </div>
+              <div class="col-lg-4 menu-item">
+                <a href="assets/img/menu/bayi.jpg" class="glightbox"><img src="assets/img/menu/bayi.jpg" class="menu-img img-fluid" alt="Kebutuhan Anak" /></a>
+                <h4>Kebutuhan Anak</h4>
+                <p class="ingredients">Barang-barang yang dibutuhkan untuk perawatan, hiburan, dan pertumbuhan anak.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Menu Section -->
+
+    <!-- Chefs Section -->
+    <section id="chefs" class="chefs section">
+      <div class="container section-title" data-aos="fade-up">
+        <p><span class="description-title">Informasi Anggota</span></p>
+      </div>
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="assets/img/teguh ktm.jpg" class="img-fluid" alt="Teguh Wichaksono" />
+                <div class="social">
+                  <a href="https://instagram.com/teguhwichaksono"><i class="bi bi-instagram"></i></a>
+                  <a href="https://wa.me/085855615218"><i class="bi bi-whatsapp"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Teguh Wichaksono</h4>
+                <span>E31241421</span>
+                <p>Jangan menyerah hanya karena prosesnya sulit. Setiap langkah kecil yang kamu ambil hari ini adalah pondasi untuk masa depanmu. Teruslah berjuang, karena usaha tidak akan mengkhianati hasil.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="assets/img/ade_ktm.jpg" class="img-fluid" alt="Ade Cahyadi Enggar A" />
+                <div class="social">
+                  <a href="https://instagram.com/adecahyadi__"><i class="bi bi-instagram"></i></a>
+                  <a href="https://wa.me/081285870021"><i class="bi bi-whatsapp"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Ade Cahyadi Enggar A</h4>
+                <span>E31241641</span>
+                <p>Setiap tahun akan berganti. Setiap berganti, akan ada tahun yang berarti. Kadang, sebuah pencapaian bukan hanya dari suksesnya program, bukan juga dari seberapa banyak yang kita dapatkan, tapi justru datang dari perjalanan, karena perjalanan adalah sebuah pengalaman.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="assets/img/dhafa_ktm.jpg" class="img-fluid" alt="Firstian Dhafa A.R.F" />
+                <div class="social">
+                  <a href="https://instagram.com/dhafa_arf"><i class="bi bi-instagram"></i></a>
+                  <a href="https://wa.me/085791338868"><i class="bi bi-whatsapp"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Firstian Dhafa A.R.F</h4>
+                <span>E31241743</span>
+                <p>Hidup itu sebenarnya sederhana, tapi kita sering membuatnya rumit dengan terlalu banyak mengkhawatirkan, membandingkan, dan mengejar hal yang tak perlu. Padahal, kebahagiaan sejati datang saat kita belajar menerima dan bersyukur atas apa yang dimiliki.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="assets/img/ackmal_ktm.jpg" class="img-fluid" alt="Moh. Ackmal Abdullah" />
+                <div class="social">
+                  <a href="https://instagram.com/ackoye21"><i class="bi bi-instagram"></i></a>
+                  <a href="https://wa.me/083854417991"><i class="bi bi-whatsapp"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Moh. Ackmal Abdullah</h4>
+                <span>E31241229</span>
+                <p>Kamu boleh menangis karena beratnya proses, tapi ingat!! Allah tidak membawamu sejauh ini untuk gagal.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Chefs Section -->
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery section">
+      <div class="container section-title" data-aos="fade-up">
+        <p><span class="description-title">Album Pandri Sembako</span></p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "centeredSlides": true,
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 0
+                },
+                "768": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 20
+                },
+                "1200": {
+                  "slidesPerView": 5,
+                  "spaceBetween": 20
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/galery/foto11.jpg"><img src="assets/img/galery/foto11.jpg" class="img-fluid" alt="Gallery Image 1" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/galery/foto2.jpg"><img src="assets/img/galery/foto2.jpg" class="img-fluid" alt="Gallery Image 2" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/galery/foto3.jpg"><img src="assets/img/galery/foto3.jpg" class="img-fluid" alt="Gallery Image 3" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/galery/foto4.jpg"><img src="assets/img/galery/foto4.jpg" class="img-fluid" alt="Gallery Image 4" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/galery/foto5.jpg"><img src="assets/img/galery/foto5.jpg" class="img-fluid" alt="Gallery Image 5" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/galery/foto6.jpg"><img src="assets/img/galery/foto6.jpg" class="img-fluid" alt="Gallery Image 6" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/galery/foto7.jpg"><img src="assets/img/galery/foto7.jpg" class="img-fluid" alt="Gallery Image 7" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/galery/foto8.jpg"><img src="assets/img/galery/foto8.jpg" class="img-fluid" alt="Gallery Image 8" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/galery/foto9.jpg"><img src="assets/img/galery/foto9.jpg" class="img-fluid" alt="Gallery Image 9" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="assets/img/galery/foto10.jpg"><img src="assets/img/galery/foto10.jpg" class="img-fluid" alt="Gallery Image 10" /></a>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+    <!-- /Gallery Section -->
+
+    <!-- Lokasi Section -->
+    <section id="lokasi" class="lokasi section">
+      <div class="container section-title" data-aos="fade-up">
+        <p><span class="description-title">Lokasi</span></p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="mb-5">
+          <iframe style="width: 100%; height: 400px; border-radius: 12px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.0647763146753!2d113.64370729999999!3d-8.1962298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd69168070c66f9%3A0x4b7154ca85fddbec!2sBursa%20Sembako%20Bu%20Pandri!5e0!3m2!1sid!2sid!4v1747415523629!5m2!1sid!2sid" frameborder="0" allowfullscreen=""></iframe>
+        </div>
+      </div>
+    </section>
+    <!-- /Lokasi Section -->
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container">
+      <div class="row gy-3">
+        <div class="col-lg-4 col-md-6 d-flex">
+          <i class="bi bi-geo-alt icon text-info"></i>
+          <div class="address">
+            <h4>Alamat</h4>
+            <p>Jl. Griya Mangli Indah</p>
+            <p>Jember, Jawa Timur (68131)</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex">
+          <i class="bi bi-telephone icon text-info"></i>
+          <div>
+            <h4>Hubungi Kami</h4>
+            <p>
+              <strong>No Telp:</strong> <span>+62 86709876785</span><br />
+              <strong>Email:</strong> <span>Pandri090@gmail.com</span><br />
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex">
+          <i class="bi bi-clock icon text-info"></i>
+          <div>
+            <h4>Jam Buka</h4>
+            <p>
+              <strong>Senin-Sabtu:</strong> <span>06.00 - 23.00</span><br />
+              <strong>Minggu:</strong> <span>06.00 - 23.00</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>
+        © <span>Copyright</span> <strong class="px-1 sitename">TADA DEV</strong>
+        <span>All Rights Reserved</span>
+      </p>
+      <div class="credits">
+        Designed by
+        <a href="https://bootstrapmade.com/" class="text-info">BootstrapMade</a> Distributed by
+        <a href="https://themewagon.com" class="text-info">ThemeWagon</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

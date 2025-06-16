@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Pandri Sembako - Tentang Kami</title>
+  <meta name="description" content="Pandri Sembako - Informasi anggota tim kami di Jember." />
+  <meta name="keywords" content="toko kelontong, sembako, tentang kami, Jember" />
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <style>
+    :root {
+      --primary-color: #1E88E5;
+      --secondary-color: #E3F2FD;
+      --accent-color: #1565C0;
+      --text-color: #212121;
+      --background-color: #FFFFFF;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: var(--text-color);
+      background-color: var(--background-color);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+      color: var(--text-color);
+    }
+
+    .header {
+      background-color: var(--background-color);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo img {
+      transition: transform 0.3s ease;
+      max-width: 140px;
+    }
+
+    .logo img:hover {
+      transform: scale(1.05);
+    }
+
+    .navmenu ul li a {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      color: var(--text-color);
+      padding: 10px 15px;
+      transition: color 0.3s ease, background-color 0.3s ease;
+      border-radius: 5px;
+    }
+
+    .navmenu ul li a:hover,
+    .navmenu ul li a.active {
+      color: var(--primary-color);
+      background-color: var(--secondary-color);
+    }
+
+    .chefs {
+      background: linear-gradient(135deg, var(--secondary-color), var(--background-color));
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section-title .description-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .team-member {
+      background-color: var(--background-color);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .team-member:hover {
+      transform: translateY(-5px);
+    }
+
+    .team-member img {
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .team-member img:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .social a {
+      color: var(--primary-color);
+      font-size: 1.25rem;
+      margin: 0 8px;
+      transition: color 0.3s ease;
+    }
+
+    .social a:hover {
+      color: var(--accent-color);
+    }
+
+    .footer {
+      background-color: #1A2521;
+      color: #FFFFFF;
+      padding: 60px 0;
+    }
+
+    .footer .icon {
+      font-size: 1.75rem;
+      color: var(--accent-color);
+      margin-right: 15px;
+    }
+
+    .footer a.text-info {
+      color: var(--accent-color) !important;
+      transition: color 0.3s ease;
+    }
+
+    .footer a.text-info:hover {
+      color: var(--primary-color) !important;
+    }
+
+    .scroll-top {
+      background-color: var(--primary-color);
+      color: #FFFFFF;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .scroll-top:hover {
+      background-color: var(--accent-color);
+    }
+
+    @media (max-width: 992px) {
+      .section-title .description-title {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .chefs {
+        padding: 60px 0;
+      }
+
+      .section-title .description-title {
+        font-size: 1.75rem;
+      }
+
+      .navmenu ul {
+        flex-direction: column;
+        background-color: var(--background-color);
+        padding: 20px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        display: none;
+      }
+
+      .navmenu ul.show {
+        display: flex;
+      }
+
+      .mobile-nav-toggle {
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+    }
+  </style>
+</head>
+
+<body class="index-page">
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/Logo bu pandri3.png.jpg" width="140" alt="Pandri Sembako" />
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero">Utama</a></li>
+          <li><a href="about.html">Keunggulan</a></li>
+          <li><a href="menu.html">Produk</a></li>
+          <li><a href="chefs.html" class="active">Tentang Kami</a></li>
+          <li><a href="gallery.html">Album</a></li>
+          <li><a href="lokasi.html">Lokasi</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- Chefs Section -->
+    <section id="chefs" class="chefs section">
+      <div class="container section-title" data-aos="fade-up">
+        <p><span class="description-title">Informasi Anggota</span></p>
+      </div>
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="assets/img/teguh ktm.jpg" class="img-fluid" alt="Teguh Wichaksono" />
+                <div class="social">
+                  <a href="https://instagram.com/teguhwichaksono"><i class="bi bi-instagram"></i></a>
+                  <a href="https://wa.me/085855615218"><i class="bi bi-whatsapp"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Teguh Wichaksono</h4>
+                <span>E31241421</span>
+                <p>Jangan menyerah hanya karena prosesnya sulit. Setiap langkah kecil yang kamu ambil hari ini adalah pondasi untuk masa depanmu. Teruslah berjuang, karena usaha tidak akan mengkhianati hasil.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="assets/img/ade_ktm.jpg" class="img-fluid" alt="Ade Cahyadi Enggar A" />
+                <div class="social">
+                  <a href="https://instagram.com/adecahyadi__"><i class="bi bi-instagram"></i></a>
+                  <a href="https://wa.me/081285870021"><i class="bi bi-whatsapp"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Ade Cahyadi Enggar A</h4>
+                <span>E31241641</span>
+                <p>Setiap tahun akan berganti. Setiap berganti, akan ada tahun yang berarti. Kadang, sebuah pencapaian bukan hanya dari suksesnya program, bukan juga dari seberapa banyak yang kita dapatkan, tapi justru datang dari perjalanan, karena perjalanan adalah sebuah pengalaman.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="assets/img/dhafa_ktm.jpg" class="img-fluid" alt="Firstian Dhafa A.R.F" />
+                <div class="social">
+                  <a href="https://instagram.com/dhafa_arf"><i class="bi bi-instagram"></i></a>
+                  <a href="https://wa.me/085791338868"><i class="bi bi-whatsapp"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Firstian Dhafa A.R.F</h4>
+                <span>E31241743</span>
+                <p>Hidup itu sebenarnya sederhana, tapi kita sering membuatnya rumit dengan terlalu banyak mengkhawatirkan, membandingkan, dan mengejar hal yang tak perlu. Padahal, kebahagiaan sejati datang saat kita belajar menerima dan bersyukur atas apa yang dimiliki.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="assets/img/ackmal_ktm.jpg" class="img-fluid" alt="Moh. Ackmal Abdullah" />
+                <div class="social">
+                  <a href="https://instagram.com/ackoye21"><i class="bi bi-instagram"></i></a>
+                  <a href="https://wa.me/083854417991"><i class="bi bi-whatsapp"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Moh. Ackmal Abdullah</h4>
+                <span>E31241229</span>
+                <p>Kamu boleh menangis karena beratnya proses, tapi ingat!! Allah tidak membawamu sejauh ini untuk gagal.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Chefs Section -->
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container">
+      <div class="row gy-3">
+        <div class="col-lg-4 col-md-6 d-flex">
+          <i class="bi bi-geo-alt icon text-info"></i>
+          <div class="address">
+            <h4>Alamat</h4>
+            <p>Jl. Griya Mangli Indah</p>
+            <p>Jember, Jawa Timur (68131)</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex">
+          <i class="bi bi-telephone icon text-info"></i>
+          <div>
+            <h4>Hubungi Kami</h4>
+            <p>
+              <strong>No Telp:</strong> <span>+62 86709876785</span><br />
+              <strong>Email:</strong> <span>Pandri090@gmail.com</span><br />
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex">
+          <i class="bi bi-clock icon text-info"></i>
+          <div>
+            <h4>Jam Buka</h4>
+            <p>
+              <strong>Senin-Sabtu:</strong> <span>06.00 - 23.00</span><br />
+              <strong>Minggu:</strong> <span>06.00 - 23.00</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>
+        © <span>Copyright</span> <strong class="px-1 sitename">TADA DEV</strong>
+        <span>All Rights Reserved</span>
+      </p>
+      <div class="credits">
+        Designed by
+        <a href="https://bootstrapmade.com/" class="text-info">BootstrapMade</a> Distributed by
+        <a href="https://themewagon.com" class="text-info">ThemeWagon</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
