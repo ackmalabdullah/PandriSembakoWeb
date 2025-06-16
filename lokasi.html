@@ -44,7 +44,12 @@
       line-height: 1.6;
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       font-family: 'Poppins', sans-serif;
       color: var(--text-color);
     }
@@ -82,11 +87,49 @@
       background-color: var(--secondary-color);
     }
 
+    .hero,
+    .about,
+    .why-us,
+    .menu,
+    .chefs,
+    .gallery,
     .lokasi {
       background: linear-gradient(135deg, var(--secondary-color), var(--background-color));
       padding: 80px 0;
       position: relative;
       overflow: hidden;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.125rem;
+      color: var(--text-color);
+      max-width: 600px;
+    }
+
+    .hero-img img,
+    .about img,
+    .menu-item img,
+    .swiper-slide img,
+    .team-member img {
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hero-img img:hover,
+    .about img:hover,
+    .menu-item img:hover,
+    .swiper-slide img:hover,
+    .team-member img:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
     }
 
     .section-title .description-title {
@@ -97,6 +140,52 @@
       margin-bottom: 20px;
       position: relative;
       display: inline-block;
+    }
+
+    .why-box {
+      background-color: var(--secondary-color);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .why-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .icon-box i {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+
+    .icon-box h4 {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    .team-member {
+      background-color: var(--background-color);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .team-member:hover {
+      transform: translateY(-5px);
+    }
+
+    .social a {
+      color: var(--primary-color);
+      font-size: 1.25rem;
+      margin: 0 8px;
+      transition: color 0.3s ease;
+    }
+
+    .social a:hover {
+      color: var(--accent-color);
     }
 
     iframe {
@@ -142,14 +231,33 @@
     }
 
     @media (max-width: 992px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
       .section-title .description-title {
         font-size: 2rem;
       }
     }
 
     @media (max-width: 768px) {
+
+      .hero,
+      .about,
+      .why-us,
+      .menu,
+      .chefs,
+      .gallery,
       .lokasi {
         padding: 60px 0;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
       }
 
       .section-title .description-title {
@@ -218,7 +326,7 @@
 
   <footer id="footer" class="footer dark-background">
     <div class="container">
-      <div class="row gy-3">
+      <div class="row gy-4">
         <div class="col-lg-4 col-md-6 d-flex">
           <i class="bi bi-geo-alt icon text-info"></i>
           <div class="address">
@@ -261,7 +369,8 @@
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
@@ -275,6 +384,37 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <!-- Custom JS for Mobile Navigation -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+      const navMenu = document.querySelector('.navmenu ul');
+
+      mobileNavToggle.addEventListener('click', function () {
+        navMenu.classList.toggle('show');
+        mobileNavToggle.classList.toggle('bi-list');
+        mobileNavToggle.classList.toggle('bi-x');
+      });
+
+      // Close menu when clicking a link
+      navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('show');
+          mobileNavToggle.classList.add('bi-list');
+          mobileNavToggle.classList.remove('bi-x');
+        });
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', function (event) {
+        if (!navMenu.contains(event.target) && !mobileNavToggle.contains(event.target)) {
+          navMenu.classList.remove('show');
+          mobileNavToggle.classList.add('bi-list');
+          mobileNavToggle.classList.remove('bi-x');
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>

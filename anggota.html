@@ -15,7 +15,9 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap"
+    rel="stylesheet" />
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -44,7 +46,12 @@
       line-height: 1.6;
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       font-family: 'Poppins', sans-serif;
       color: var(--text-color);
     }
@@ -82,11 +89,49 @@
       background-color: var(--secondary-color);
     }
 
-    .chefs {
+    .hero,
+    .about,
+    .why-us,
+    .menu,
+    .chefs,
+    .gallery,
+    .lokasi {
       background: linear-gradient(135deg, var(--secondary-color), var(--background-color));
       padding: 80px 0;
       position: relative;
       overflow: hidden;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.125rem;
+      color: var(--text-color);
+      max-width: 600px;
+    }
+
+    .hero-img img,
+    .about img,
+    .menu-item img,
+    .swiper-slide img,
+    .team-member img {
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hero-img img:hover,
+    .about img:hover,
+    .menu-item img:hover,
+    .swiper-slide img:hover,
+    .team-member img:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
     }
 
     .section-title .description-title {
@@ -97,6 +142,29 @@
       margin-bottom: 20px;
       position: relative;
       display: inline-block;
+    }
+
+    .why-box {
+      background-color: var(--secondary-color);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .why-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .icon-box i {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+
+    .icon-box h4 {
+      font-size: 1.25rem;
+      font-weight: 600;
     }
 
     .team-member {
@@ -111,17 +179,6 @@
       transform: translateY(-5px);
     }
 
-    .team-member img {
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .team-member img:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-    }
-
     .social a {
       color: var(--primary-color);
       font-size: 1.25rem;
@@ -131,6 +188,11 @@
 
     .social a:hover {
       color: var(--accent-color);
+    }
+
+    iframe {
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     .footer {
@@ -171,14 +233,33 @@
     }
 
     @media (max-width: 992px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
       .section-title .description-title {
         font-size: 2rem;
       }
     }
 
     @media (max-width: 768px) {
-      .chefs {
+
+      .hero,
+      .about,
+      .why-us,
+      .menu,
+      .chefs,
+      .gallery,
+      .lokasi {
         padding: 60px 0;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
       }
 
       .section-title .description-title {
@@ -250,7 +331,8 @@
               <div class="member-info">
                 <h4>Teguh Wichaksono</h4>
                 <span>E31241421</span>
-                <p>Jangan menyerah hanya karena prosesnya sulit. Setiap langkah kecil yang kamu ambil hari ini adalah pondasi untuk masa depanmu. Teruslah berjuang, karena usaha tidak akan mengkhianati hasil.</p>
+                <p>Jangan menyerah hanya karena prosesnya sulit. Setiap langkah kecil yang kamu ambil hari ini adalah
+                  pondasi untuk masa depanmu. Teruslah berjuang, karena usaha tidak akan mengkhianati hasil.</p>
               </div>
             </div>
           </div>
@@ -266,7 +348,9 @@
               <div class="member-info">
                 <h4>Ade Cahyadi Enggar A</h4>
                 <span>E31241641</span>
-                <p>Setiap tahun akan berganti. Setiap berganti, akan ada tahun yang berarti. Kadang, sebuah pencapaian bukan hanya dari suksesnya program, bukan juga dari seberapa banyak yang kita dapatkan, tapi justru datang dari perjalanan, karena perjalanan adalah sebuah pengalaman.</p>
+                <p>Setiap tahun akan berganti. Setiap berganti, akan ada tahun yang berarti. Kadang, sebuah pencapaian
+                  bukan hanya dari suksesnya program, bukan juga dari seberapa banyak yang kita dapatkan, tapi justru
+                  datang dari perjalanan, karena perjalanan adalah sebuah pengalaman.</p>
               </div>
             </div>
           </div>
@@ -282,7 +366,9 @@
               <div class="member-info">
                 <h4>Firstian Dhafa A.R.F</h4>
                 <span>E31241743</span>
-                <p>Hidup itu sebenarnya sederhana, tapi kita sering membuatnya rumit dengan terlalu banyak mengkhawatirkan, membandingkan, dan mengejar hal yang tak perlu. Padahal, kebahagiaan sejati datang saat kita belajar menerima dan bersyukur atas apa yang dimiliki.</p>
+                <p>Hidup itu sebenarnya sederhana, tapi kita sering membuatnya rumit dengan terlalu banyak
+                  mengkhawatirkan, membandingkan, dan mengejar hal yang tak perlu. Padahal, kebahagiaan sejati datang
+                  saat kita belajar menerima dan bersyukur atas apa yang dimiliki.</p>
               </div>
             </div>
           </div>
@@ -298,7 +384,8 @@
               <div class="member-info">
                 <h4>Moh. Ackmal Abdullah</h4>
                 <span>E31241229</span>
-                <p>Kamu boleh menangis karena beratnya proses, tapi ingat!! Allah tidak membawamu sejauh ini untuk gagal.</p>
+                <p>Kamu boleh menangis karena beratnya proses, tapi ingat!! Allah tidak membawamu sejauh ini untuk
+                  gagal.</p>
               </div>
             </div>
           </div>
@@ -310,7 +397,7 @@
 
   <footer id="footer" class="footer dark-background">
     <div class="container">
-      <div class="row gy-3">
+      <div class="row gy-4">
         <div class="col-lg-4 col-md-6 d-flex">
           <i class="bi bi-geo-alt icon text-info"></i>
           <div class="address">
@@ -353,7 +440,8 @@
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
@@ -367,6 +455,37 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <!-- Custom JS for Mobile Navigation -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+      const navMenu = document.querySelector('.navmenu ul');
+
+      mobileNavToggle.addEventListener('click', function () {
+        navMenu.classList.toggle('show');
+        mobileNavToggle.classList.toggle('bi-list');
+        mobileNavToggle.classList.toggle('bi-x');
+      });
+
+      // Close menu when clicking a link
+      navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('show');
+          mobileNavToggle.classList.add('bi-list');
+          mobileNavToggle.classList.remove('bi-x');
+        });
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', function (event) {
+        if (!navMenu.contains(event.target) && !mobileNavToggle.contains(event.target)) {
+          navMenu.classList.remove('show');
+          mobileNavToggle.classList.add('bi-list');
+          mobileNavToggle.classList.remove('bi-x');
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
